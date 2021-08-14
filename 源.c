@@ -1,12 +1,12 @@
 //#include<stdio.h>
-////枚举关键-enum
+//枚举关键-enum
 //enum Sex
 //{
 //	MALE,
 //	FEMALE,
 //	SECRET
 //};
-////MALE,FEMALE,SECRET-枚举常量
+//MALE,FEMALE,SECRET-枚举常量
 //int main(void)
 //{	
 //	printf("%d\n", MALE);//0
@@ -24,8 +24,8 @@
 //	printf("%d\n",strlen(arr2));
 //	return 0;
 //}
-#include<stdio.h>
-#include<string.h>
+//#include<stdio.h>
+//#include<string.h>
 //int main(viod)
 //{
 //	//printf("%d\n", strlen("c:\test\32\test.c"));
@@ -33,15 +33,62 @@
 //	//\ddd   ddd是八进制数字，\ddd表示八进制对应的十进制的ASCII码值对应的字符
 //	return 0;
 //}
+//#include<stdio.h>
+//int main(viod)
+//{	
+//	int input=0;
+//	printf("你能好好学习吗？（选择1/0）");
+//	scanf_s("%d", &input);
+//	if (input == 1)
+//	printf("拿到offer");
+//	else
+//	printf("回家种田");
+//	return 0;
+//}
+//#include<stdio.h>
+//int main(void)
+//{
+//	printf("好好学习\n");
+//	int line = 0;
+//	while (line < 20000)
+//	{
+//		printf("敲一行代码%d\n", line);
+//		line++;
+//	}
+//	if (line >= 20000)
+//		printf("拿到好offer\n");
+//	return 0;
+//}
+//#include<stdio.h>
+//ADD(int x, int y)
+//{
+//	int z = x + y;
+//	return z;
+//}
+//int main(void)
+//{
+//	int sum = 0;
+//	int a = 10;
+//	int b = 20;
+//	int num1 = 100;
+//	int num2 = 200;
+//	sum=ADD(a, b);
+//	printf("%d\n",sum);
+//	sum=ADD(num1, num2);
+//	printf("%d\n",sum);
+//	sum = ADD(2, 3);
+//	printf("%d\n", sum);
+//	return 0;
+//}
 #include<stdio.h>
-int main(viod)
-{	
-	int input=0;
-	printf("你能好好学习吗？（选择1/0）");
-	scanf_s("%d", &input);
-	if (input == 1)
-	printf("拿到offer");
-	else
-	printf("回家种田");
+int main(void)
+{
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int i = 0;
+	while (i < 10)
+	{
+		printf("%d ",arr[i]);
+		i++;
+	}
 	return 0;
 }
