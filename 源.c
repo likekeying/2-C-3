@@ -80,15 +80,29 @@
 //	printf("%d\n", sum);
 //	return 0;
 //}
+//#include<stdio.h>
+//int main(void)
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int i = 0;
+//	while (i < 10)
+//	{
+//		printf("%d ",arr[i]);
+//		i++;
+//	}
+//	return 0;
+//}
 #include<stdio.h>
 int main(void)
 {
-	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
-	int i = 0;
-	while (i < 10)
-	{
-		printf("%d ",arr[i]);
-		i++;
-	}
+	//移位操作符（二进制）
+	//<<左移
+	//>>右移
+	int a = 1;
+	//整型1占4个字节-32个bit位
+	//00000000000000000000000000000001
+	int b = a << 2;
+	printf("%d\n", b);
+	printf("%d\n", a);
 	return 0;
 }
