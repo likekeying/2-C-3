@@ -92,17 +92,24 @@
 //	}
 //	return 0;
 //}
+//
+
+//交换两个整形a,b的值，不引用第三个变量，
 #include<stdio.h>
+#include<limits.h>
 int main(void)
 {
-	//移位操作符（二进制）
-	//<<左移
-	//>>右移
-	int a = 1;
-	//整型1占4个字节-32个bit位
-	//00000000000000000000000000000001
-	int b = a << 2;
-	printf("%d\n", b);
-	printf("%d\n", a);
+	int a = 3;
+	int b = 5;
+	//INT_MAX; 2147483647
+	printf("交换前:a=%d b=%d\n", a,b);
+	//有溢出的问题，int是4个字节—32给比特位—最大值,
+	//a = a + b;
+	//b = a - b;
+	//a = a - b;
+	a = a ^ b;
+	b = a ^ b;
+	a = a ^ b;//异或操作可读性差，执行效率比其他方法低
+	printf("交换后:a=%d b=%d", a, b);
 	return 0;
 }
