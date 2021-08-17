@@ -94,22 +94,63 @@
 //}
 //
 
-//交换两个整形a,b的值，不引用第三个变量，
+////交换两个整形a,b的值，不引用第三个变量，
+//#include<stdio.h>
+//#include<limits.h>
+//int main(void)
+//{
+//	int a = 3;
+//	int b = 5;
+//	//INT_MAX; 2147483647
+//	printf("交换前:a=%d b=%d\n", a,b);
+//	//有溢出的问题，int是4个字节—32给比特位—最大值,
+//	//a = a + b;
+//	//b = a - b;
+//	//a = a - b;
+//	a = a ^ b;
+//	b = a ^ b;
+//	a = a ^ b;//异或操作可读性差，执行效率比其他方法低
+//	printf("交换后:a=%d b=%d", a, b);
+//	return 0;
+//}
+
+//给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
 #include<stdio.h>
-#include<limits.h>
 int main(void)
 {
-	int a = 3;
-	int b = 5;
-	//INT_MAX; 2147483647
-	printf("交换前:a=%d b=%d\n", a,b);
-	//有溢出的问题，int是4个字节—32给比特位—最大值,
-	//a = a + b;
-	//b = a - b;
-	//a = a - b;
-	a = a ^ b;
-	b = a ^ b;
-	a = a ^ b;//异或操作可读性差，执行效率比其他方法低
-	printf("交换后:a=%d b=%d", a, b);
+	int arr[] = { 1,2,3,4,1,2,3,4,5 };
+	int i = 0;
+	int ret = 0;
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	for (i = 0; i < sz; i++)
+	{
+		ret = ret ^ arr[i];
+	}
+	printf("元素:%d\n", ret);
 	return 0;
 }
+//int main(void)
+//{
+//	int arr[] = { 1,2,3,4,1,2,3,4,5 };
+//	int i = 0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//
+//	for (i = 0;i < sz; i++)
+//	{
+//		int count = 0;
+//		int j = 0;
+//		for (j = 0; j < sz; j++)
+//		{
+//			if (arr[i] == arr[j])
+//			{
+//				count++;
+//			}
+//		}
+//		if(count==1)
+//		{
+//			printf("元素：%d\n", arr[i]);
+//			break;
+//		}
+//	}
+//	return 0;
+//}
